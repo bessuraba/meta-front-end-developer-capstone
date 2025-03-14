@@ -1,8 +1,12 @@
+import styles from "./Nav.module.css"
+
 const Nav = () => (
-  <nav>
-    <div>
-      <img src="/Logo.svg" alt="logo"/>
-      <ul role="navigation">
+  <nav className={styles.Nav}>
+    <div className={styles.NavContainer}>
+      <a className={styles.NavLogoContainer} href="/" title="Little Lemon">
+        <img src="/Logo.svg" alt="logo"/>
+      </a>
+      <ul className={styles.NavList} role="navigation">
         <li>
           <a href="/" title="Home">Home</a>
         </li>
