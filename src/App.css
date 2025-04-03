@@ -1,10 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
+
 :root {
   --desktop-width: 874px;
   --navigation-bar-height: 86px;
+  --font-family-markazi: "Markazi Text", serif;
+  --font-family-karla: "Karla", sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --colors-green: rgba(73, 94, 87, 1);
+  --colors-yellow: rgba(244, 206, 20, 1);
+  --colors-light-salmon: rgba(238, 153, 114, 1);
+  --colors-bisque: rgba(251, 218, 187, 1);
+  --colors-light-grey: rgba(237, 239, 238, 1);
+  --colors-dark-grey: rgba(51,51,51,1);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.text-display-title {
+  font-family: var(--font-family-markazi);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-medium);
+  font-style: normal;
+  font-size: 85.33px;
+}
+
+.text-sub-title {
+  font-family: var(--font-family-markazi);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+  font-size: 53.33px;
+}
+
+
+.text-lead-text {
+  font-family: var(--font-family-karla);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-medium);
+  font-style: normal;
+  font-size: 24px;
+}
+
+.text-section-title {
+  font-family: var(--font-family-karla);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-extra-bold);
+  font-style: normal;
+  font-size: 26.66px;
+  text-transform: uppercase;
+}
+
+.text-specials-text {
+  font-family: var(--font-family-karla);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-extra-bold);
+  font-style: normal;
+  font-size: 21.33px;
+}
+
+.text-card-title {
+  font-family: var(--font-family-karla);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-bold);
+  font-style: normal;
+  font-size: 24px;
+}
+
+.text-paragraph {
+  font-family: var(--font-family-karla);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+  font-size: 21.33px;
+}
+
+.text-highlight-text {
+  font-family: var(--font-family-karla);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-medium);
+  font-style: normal;
+  font-size: 21.33px;
 }
