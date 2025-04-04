@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
 
 :root {
-  --desktop-width: 874px;
-  --navigation-bar-height: 86px;
+  --container-width-desktop: 874px;
+  --container-width-tablet: 850px;
+  --container-width-mobile: 100%;
+  --navbar-height-desktop: 86px;
+  --navbar-height-tablet: 60px;
   --font-family-markazi: "Markazi Text", serif;
   --font-family-karla: "Karla", sans-serif;
   --font-weight-bold: 700;

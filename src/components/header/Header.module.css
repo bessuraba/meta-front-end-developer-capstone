@@ -3,7 +3,11 @@
 }
 
 .HeaderContainer {
-  max-width: var(--desktop-width);
+  max-width: var(--container-width-desktop);
   width: 100%;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+
 }

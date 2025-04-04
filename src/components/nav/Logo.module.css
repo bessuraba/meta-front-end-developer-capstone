@@ -1,0 +1,12 @@
+.Wrapper {
+  width: 147.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Image {
+  width: 100%;
+  aspect-ratio: 1 / 0.4067;
+}

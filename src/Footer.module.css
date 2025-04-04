@@ -4,7 +4,7 @@
 }
 
 .FooterContainer {
-  max-width: var(--desktop-width);
+  max-width: var(--container-width-desktop);
   width: 100%;
   margin: 0 auto;
   gap: 30px;

@@ -1,0 +1,36 @@
+.Wrapper {
+  width: 100%;
+  height: var(--navbar-height-desktop);
+  padding-left: 16px;
+  padding-right: 16px;
+
+  border: 1px solid black;
+}
+
+.Container {
+  width: 100%;
+  height: 100%;
+  max-width: var(--container-width-desktop);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .Wrapper {
+    height: var(--navbar-height-tablet);
+    background-color: red;
+  }
+
+  .Container {
+    max-width: var(--container-width-tablet);
+  }
+}
+
+@media (max-width: 560px) {
+  .Wrapper {
+    background-color: blue;
+  }
+}
