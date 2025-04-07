@@ -3,8 +3,6 @@
   height: var(--navbar-height-desktop);
   padding-left: 16px;
   padding-right: 16px;
-
-  border: 1px solid black;
 }
 
 .Container {
@@ -21,7 +19,6 @@
 @media (max-width: 1024px) {
   .Wrapper {
     height: var(--navbar-height-tablet);
-    background-color: red;
   }
 
   .Container {
@@ -29,8 +26,19 @@
   }
 }
 
-@media (max-width: 560px) {
-  .Wrapper {
-    background-color: blue;
+@media (max-width: 760px) {
+  .Container {
+    max-width: initial;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Container::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 22px;
   }
 }

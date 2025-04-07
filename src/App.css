@@ -31,7 +31,7 @@
   font-optical-sizing: auto;
   font-weight: var(--font-weight-medium);
   font-style: normal;
-  font-size: 85.33px;
+  font-size: 64px;
 }
 
 .text-sub-title {
@@ -39,7 +39,7 @@
   font-optical-sizing: auto;
   font-weight: var(--font-weight-regular);
   font-style: normal;
-  font-size: 53.33px;
+  font-size: 40px;
 }
 
 
@@ -48,7 +48,7 @@
   font-optical-sizing: auto;
   font-weight: var(--font-weight-medium);
   font-style: normal;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .text-section-title {
@@ -56,7 +56,7 @@
   font-optical-sizing: auto;
   font-weight: var(--font-weight-extra-bold);
   font-style: normal;
-  font-size: 26.66px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -65,7 +65,7 @@
   font-optical-sizing: auto;
   font-weight: var(--font-weight-extra-bold);
   font-style: normal;
-  font-size: 21.33px;
+  font-size: 16px;
 }
 
 .text-card-title {
@@ -73,7 +73,7 @@
   font-optical-sizing: auto;
   font-weight: var(--font-weight-bold);
   font-style: normal;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .text-paragraph {
@@ -81,7 +81,7 @@
   font-optical-sizing: auto;
   font-weight: var(--font-weight-regular);
   font-style: normal;
-  font-size: 21.33px;
+  font-size: 16px;
 }
 
 .text-highlight-text {
@@ -89,5 +89,5 @@
   font-optical-sizing: auto;
   font-weight: var(--font-weight-medium);
   font-style: normal;
-  font-size: 21.33px;
+  font-size: 16px;
 }
