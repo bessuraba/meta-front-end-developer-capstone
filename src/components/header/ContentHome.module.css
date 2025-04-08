@@ -1,0 +1,28 @@
+.Wrapper {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.Title {
+  color: var(--colors-yellow);
+}
+
+.Subtitle {
+  color: var(--colors-light-grey);
+}
+
+.Description {
+  color: var(--colors-light-grey);
+  margin-bottom: 32px;
+}
+
+.Link {
+  display: flex;
+  text-decoration: none;
+}

@@ -91,3 +91,47 @@
   font-style: normal;
   font-size: 16px;
 }
+
+.btn-primary {
+  display: inline-flex;
+  padding: 13px 21px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 23px;
+  background-color: var(--colors-yellow);
+  color: var(--colors-dark-grey);
+  font-family: var(--font-family-karla);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: var(--font-weight-extra-bold);
+  line-height: normal;
+  will-change: background-color, color;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--colors-green);
+  color: var(--colors-light-grey);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  padding: 13px 21px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 23px;
+  background-color: var(--colors-yellow);
+  color: var(--colors-dark-grey);
+  font-family: var(--font-family-karla);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: var(--font-weight-extra-bold);
+  line-height: normal;
+  will-change: background-color, color;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--colors-dark-grey);
+  color: var(--colors-light-grey);
+}
