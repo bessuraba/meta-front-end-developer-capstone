@@ -1,0 +1,14 @@
+.Container {
+  width: 36px;
+  height: 36px;
+  fill: none;
+}
+
+.Path {
+  fill: var(--colors-green);
+  transition: fill 0.3s ease-in-out;
+}
+
+.Wrapper:hover .Path {
+  fill: var(--colors-yellow);
+}
