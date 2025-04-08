@@ -32,3 +32,42 @@
   padding-bottom: 16px;
   border-top: 1px solid var(--colors-light-grey);
 }
+
+@media (max-width: 1024px) {
+  .Wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .Container {
+    gap: 16px;
+  }
+
+  .Top {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 760px) {
+  .Wrapper {
+    padding-top: 24px;
+  }
+
+  .Container {
+    gap: 32px;
+  }
+
+  .Top {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .Bottom {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

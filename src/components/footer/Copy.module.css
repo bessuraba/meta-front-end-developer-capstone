@@ -1,4 +1,15 @@
 .Copy {
+  flex-grow: 0;
+  flex-shrink: 0;
   display: inline-block;
   color: var(--colors-dark-grey);
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .Copy {
+    flex-grow: initial;
+    flex-shrink: initial;
+    text-align: center;
+  }
 }

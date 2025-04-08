@@ -35,6 +35,17 @@
 
 @media (max-width: 760px) {
   .Wrapper {
-    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: initial;
+    flex-shrink: initial;
+    gap: 16px;
+  }
+
+  .Item {
+    padding-left: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }

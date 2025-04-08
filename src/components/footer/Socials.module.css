@@ -7,3 +7,11 @@
   align-items: center;
   gap: 16px;
 }
+
+@media (max-width: 760px) {
+  .Wrapper {
+    flex-grow: initial;
+    flex-shrink: initial;
+    justify-content: center;
+  }
+}

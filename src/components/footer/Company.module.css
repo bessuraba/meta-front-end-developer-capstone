@@ -30,3 +30,56 @@
 .Phone {
   color: var(--colors-dark-grey);
 }
+
+@media (max-width: 760px) {
+  .Wrapper {
+    display: grid;
+    grid-template-areas:
+      "logo logo"
+      "address address"
+      "email phone";
+    row-gap: 16px;
+    column-gap: 0;
+  }
+
+  .Logo {
+    grid-area: logo;
+    width: 100%;
+    aspect-ratio: initial;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Image {
+    display: block;
+    width: 147.5px;
+    aspect-ratio: 1 / 0.2711;
+  }
+
+  .Address {
+    grid-area: address;
+    text-align: center;
+  }
+
+  .Email {
+    grid-area: email;
+  }
+
+  .Email > span, .Phone > span {
+    display: none;
+  }
+
+  .Phone {
+    grid-area: phone;
+  }
+
+  .Phone::before {
+    content: " · ";
+    color: inherit;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: inline-block;
+  }
+}
