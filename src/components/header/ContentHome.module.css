@@ -26,3 +26,21 @@
   display: flex;
   text-decoration: none;
 }
+
+@media (max-width: 1024px) {
+  .Wrapper {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .Wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .Description {
+    margin-bottom: 24px;
+  }
+}

@@ -1,6 +1,7 @@
 .Wrapper {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .Wrapper::before {
@@ -30,5 +31,29 @@
 }
 
 @media (max-width: 1024px) {
+  .Wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
+  .Container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 760px) {
+  .Wrapper::before {
+    display: none;
+  }
+
+  .Container {
+    display: block;
+    margin: 0;
+    max-width: initial;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 32px;
+  }
 }
