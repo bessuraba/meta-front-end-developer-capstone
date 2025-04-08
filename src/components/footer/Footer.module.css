@@ -1,7 +1,6 @@
 .Wrapper {
   width: 100%;
   padding-top: 128px;
-  border: 1px solid black;
 }
 
 .Container {
@@ -16,9 +15,20 @@
 }
 
 .Top {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
 }
 
 .Bottom {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid var(--colors-light-grey);
 }

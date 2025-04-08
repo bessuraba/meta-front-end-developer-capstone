@@ -18,9 +18,6 @@ const Navigation = () => (
     <li className={styles.Item}>
       <a className={classNames(styles.Link, 'text-lead-text')} href="/order" title="Order online">Order online</a>
     </li>
-    <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/login" title="Login">Login</a>
-    </li>
   </ul>
 )
 

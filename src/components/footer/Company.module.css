@@ -1,0 +1,32 @@
+.Wrapper {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.Logo {
+  display: block;
+  width: 147.5px;
+  aspect-ratio: 1 / 0.2711;
+}
+
+.Image {
+  width: 100%;
+  height: 100%;
+}
+
+.Address {
+  color: var(--colors-dark-grey);
+}
+
+.Email {
+  color: var(--colors-dark-grey);
+}
+
+.Phone {
+  color: var(--colors-dark-grey);
+}
