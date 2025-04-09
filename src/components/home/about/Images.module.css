@@ -1,0 +1,59 @@
+.Wrapper {
+  width: 320px;
+  height: 400px;
+  overflow: hidden;
+  border: 5px solid var(--colors-green);
+  border-radius: 16px;
+  position: absolute;
+  right: 0;
+}
+
+.RestaurantWrapper {
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.ChefsWrapper {
+  bottom: 0;
+  right: 86px;
+  z-index: 1;
+}
+
+.Image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ChefsImage {
+  object-position: 90% center;
+}
+
+@media (max-width: 1024px) {
+  .ChefsWrapper {
+    right: 38px;
+  }
+}
+
+@media (max-width: 760px) {
+  .Wrapper {
+    position: initial;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    right: initial;
+  }
+
+  .RestaurantWrapper {
+    height: 200px;
+  }
+
+  .ChefsWrapper {
+    height: 360px;
+  }
+
+  .ChefsImage {
+    object-position: center center;
+  }
+}

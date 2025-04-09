@@ -1,0 +1,29 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.Title {
+  color: var(--colors-yellow);
+}
+
+.Subtitle {
+  color: var(--colors-light-grey);
+}
+
+.Description {
+  color: var(--colors-light-grey);
+}
+
+@media (max-width: 760px) {
+  .Wrapper {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: var(--colors-green);
+  }
+}
