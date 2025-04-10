@@ -1,0 +1,15 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.Description {
+  color: var(--colors-dark-grey);
+}
+
+.Link {
+  text-decoration: none;
+}

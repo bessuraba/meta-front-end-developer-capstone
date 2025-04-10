@@ -1,0 +1,102 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 30%;
+  background-color: var(--colors-light-grey);
+  border-radius: 16px;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--colors-green);
+  gap: 20px;
+  text-decoration: none;
+  will-change: border-color;
+  transition: border-color 0.3s ease-in-out;
+  position: relative;
+}
+
+.Wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 186px;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Wrapper:hover {
+  border-color: var(--colors-dark-grey);
+}
+
+.Image {
+  width: 100%;
+  height: 186px;
+  object-fit: cover;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.Wrapper:hover::before {
+  opacity: 1;
+}
+
+.Content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 20px;
+}
+
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 10px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.Title {
+  color: var(--colors-dark-grey);
+}
+
+.Price {
+  color: var(--colors-light-salmon);
+}
+
+.Description {
+  color: var(--colors-green);
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.Order {
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: left;
+  color: var(--colors-dark-grey);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}

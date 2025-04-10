@@ -1,0 +1,33 @@
+.Wrapper {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid purple;
+}
+
+.Container {
+  max-width: var(--container-width-desktop);
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 32px;
+
+  border: 1px solid red;
+}
+
+.Title {
+  color: var(--colors-dark-grey);
+}
+
+.Items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+}
