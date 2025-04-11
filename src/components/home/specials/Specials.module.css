@@ -15,8 +15,6 @@
   justify-content: flex-start;
   align-items: stretch;
   gap: 32px;
-
-  border: 1px solid red;
 }
 
 .Title {
@@ -30,4 +28,34 @@
   justify-content: space-between;
   align-items: stretch;
   gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .Wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .Container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    gap: 24px;
+  }
+
+  .Items {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .Container {
+    gap: 8px;
+  }
+
+  .Items {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+  }
 }

@@ -100,3 +100,47 @@
   align-items: center;
   gap: 16px;
 }
+
+@media (max-width: 760px) {
+  .Wrapper {
+    flex-grow: initial;
+    flex-shrink: initial;
+    flex-basis: initial;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid var(--colors-light-grey);
+    background-color: transparent;
+  }
+
+  .Wrapper:last-child {
+    border-bottom: none;
+  }
+
+  .Wrapper::before {
+    display: none;
+  }
+
+  .Wrapper:hover {
+    border-color: var(--colors-light-grey);
+  }
+
+  .Image, .Order {
+    display: none;
+  }
+
+  .Content {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 16px;
+    padding-bottom: calc(32px + 21px);
+    gap: 16px;
+  }
+
+  .Price {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+  }
+}
