@@ -5,6 +5,7 @@ import Main from './components/Main'
 import Footer from './components/footer/Footer'
 import About from './components/home/about/About'
 import Specials from './components/home/specials/Specials'
+import Testimonials from './components/home/testimonials/Testimonials'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <HeaderHome />
       <Main>
         <Specials />
+        <Testimonials />
         <About />
       </Main>
       <Footer />

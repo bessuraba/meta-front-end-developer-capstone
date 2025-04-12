@@ -11,13 +11,15 @@
   padding-bottom: 32px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: stretch;
   gap: 32px;
+  min-height: 500px;
 }
 
 .Title {
   color: var(--colors-dark-grey);
+  text-align: center;
 }
 
 .Items {
@@ -48,7 +50,7 @@
 
 @media (max-width: 760px) {
   .Container {
-    gap: 8px;
+    min-height: initial;
   }
 
   .Items {
