@@ -1,22 +1,26 @@
 import './App.css'
 import Nav from './components/nav/Nav'
-import HeaderHome from './components/header/HeaderHome'
-import Main from './components/Main'
 import Footer from './components/footer/Footer'
-import About from './components/home/about/About'
-import Specials from './components/home/specials/Specials'
-import Testimonials from './components/home/testimonials/Testimonials'
+import Home from './components/home/Home'
+import Reservation from './components/reservation/Reservation'
+import About from './components/about/About'
+import Menu from './components/menu/Menu'
+import Order from './components/order/Order'
+import Login from './components/login/Login'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <>
       <Nav />
-      <HeaderHome />
-      <Main>
-        <Specials />
-        <Testimonials />
-        <About />
-      </Main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/reservation" element={<Reservation />} />
+      </Routes>
       <Footer />
     </>
   )
