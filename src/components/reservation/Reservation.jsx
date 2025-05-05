@@ -1,12 +1,11 @@
-import Main from "../Main";
-import ComingSoon from "../coming-soon/ComingSoon";
+import { Outlet } from 'react-router-dom'
+import { useState } from 'react'
 
-const Reservation = () => (
-  <>
-    <Main>
-      <ComingSoon>Reservation Page</ComingSoon>
-    </Main>
-  </>
-)
+const Reservation = () => {
+  const [data, setData] = useState({})
+  return (
+    <Outlet context={[data, setData]}/>
+  )
+}
 
 export default Reservation

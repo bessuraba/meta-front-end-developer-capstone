@@ -3,6 +3,8 @@ import Nav from './components/nav/Nav'
 import Footer from './components/footer/Footer'
 import Home from './components/home/Home'
 import Reservation from './components/reservation/Reservation'
+import ReservationForm from './components/reservation/ReservationForm'
+import ReservationComplete from './components/reservation/ReservationComplete'
 import About from './components/about/About'
 import Menu from './components/menu/Menu'
 import Order from './components/order/Order'
@@ -19,7 +21,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/order" element={<Order />} />
-        <Route path="/reservation" element={<Reservation />} />
+        <Route path="/reservation" element={<Reservation />}>
+          <Route index element={<ReservationForm />} />
+          <Route path="complete" element={<ReservationComplete />} />
+        </Route>
       </Routes>
       <Footer />
     </>
