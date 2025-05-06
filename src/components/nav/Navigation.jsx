@@ -1,25 +1,25 @@
-import styles from "./Navigation.module.css"
-import classNames from "classnames"
+import styles from './Navigation.module.css'
+import Link from '../Link'
 
 const Navigation = () => (
   <ul className={styles.Wrapper} role="navigation">
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/" title="Home">Home</a>
+      <Link to="/" title="Home">Home</Link>
     </li>
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/about" title="About">About</a>
+      <Link to="/about" title="About">About</Link>
     </li>
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/menu" title="Menu">Menu</a>
+      <Link to="/menu" title="Menu">Menu</Link>
     </li>
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/reservation" title="Reservation">Reservation</a>
+      <Link to="/reservation" title="Reservation">Reservation</Link>
     </li>
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/order" title="Order online">Order online</a>
+      <Link to="/order" title="Order online">Order online</Link>
     </li>
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/login" title="Login">Login</a>
+      <Link to="/login" title="Login">Login</Link>
     </li>
   </ul>
 )

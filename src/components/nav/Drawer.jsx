@@ -1,7 +1,8 @@
-import styles from "./Drawer.module.css"
-import { useCallback, useEffect, useState } from "react"
-import { createPortal } from "react-dom"
-import classNames from "classnames"
+import styles from './Drawer.module.css'
+import { useCallback, useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
+import classNames from 'classnames'
+import Link from '../Link'
 
 const ButtonToggle = (props) => (
   <button
@@ -30,22 +31,22 @@ const Wrapper = (props) => (
     <div className={styles.TopBar}>{props.children}</div>
     <ul className={styles.Menu} role="navigation">
       <li className={styles.Item}>
-        <a className={classNames(styles.Link, 'text-lead-text')} href="/" title="Home">Home</a>
+        <Link onClick={props.onClick} to="/" title="Home">Home</Link>
       </li>
       <li className={styles.Item}>
-        <a className={classNames(styles.Link, 'text-lead-text')} href="/about" title="About">About</a>
+        <Link onClick={props.onClick} to="/about" title="About">About</Link>
       </li>
       <li className={styles.Item}>
-        <a className={classNames(styles.Link, 'text-lead-text')} href="/menu" title="Menu">Menu</a>
+        <Link onClick={props.onClick} to="/menu" title="Menu">Menu</Link>
       </li>
       <li className={styles.Item}>
-        <a className={classNames(styles.Link, 'text-lead-text')} href="/reservation" title="Reservation">Reservation</a>
+        <Link onClick={props.onClick} to="/reservation" title="Reservation">Reservation</Link>
       </li>
       <li className={styles.Item}>
-        <a className={classNames(styles.Link, 'text-lead-text')} href="/order" title="Order online">Order online</a>
+        <Link onClick={props.onClick} to="/order" title="Order online">Order online</Link>
       </li>
       <li className={styles.Item}>
-        <a className={classNames(styles.Link, 'text-lead-text')} href="/login" title="Login">Login</a>
+        <Link onClick={props.onClick} to="/login" title="Login">Login</Link>
       </li>
     </ul>
   </div>
@@ -74,7 +75,7 @@ const Drawer = () => {
     <>
       <ButtonToggle onClick={handleToggle} isDrawerOpen={isDrawerOpen}/>
       {createPortal(
-        (<Wrapper className={{
+        (<Wrapper onClick={handleToggle} className={{
           [styles.WrapperOpened]: isDrawerOpen
         }}>
           <ButtonClose onClick={handleToggle} isDrawerOpen={isDrawerOpen}/>

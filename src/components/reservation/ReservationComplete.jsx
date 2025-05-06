@@ -4,8 +4,8 @@ import Title from './header/Title'
 import { useNavigation, useOutletContext } from 'react-router-dom'
 
 const ReservationComplete = (props) => {
-  const [data] = useOutletContext()
-  console.log(data)
+  const { reservation } = useOutletContext()
+  console.log(reservation)
   return (
     <>
       <Header>

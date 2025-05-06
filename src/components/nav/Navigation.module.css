@@ -11,20 +11,6 @@
   padding-left: 16px;;
 }
 
-.Link {
-  color: var(--colors-dark-grey);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  border-color: transparent;
-  will-change: color, border-color;
-  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-}
-
-.Link:hover {
-  color: var(--colors-green);
-  border-color: var(--colors-green);
-}
-
 @media (max-width: 1024px) {
   .Wrapper {
     gap: 0;

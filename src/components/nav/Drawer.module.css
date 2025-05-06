@@ -47,6 +47,7 @@
     background-color: white;
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
     will-change: width, height;
+    z-index: 100;
   }
 
   .WrapperOpened {
@@ -86,19 +87,5 @@
 
   .Item {
     padding: 12px 0;
-  }
-
-  .Link {
-    color: var(--colors-dark-grey);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    border-color: transparent;
-    will-change: color, border-color;
-    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  }
-
-  .Link:hover {
-    color: var(--colors-green);
-    border-color: var(--colors-green);
   }
 }

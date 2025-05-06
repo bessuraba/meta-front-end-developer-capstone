@@ -1,22 +1,22 @@
-import styles from "./Doormat.module.css"
-import classNames from "classnames"
+import styles from './Doormat.module.css'
+import Link from '../Link'
 
 const Navigation = () => (
   <ul className={styles.Wrapper} role="navigation">
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/" title="Home">Home</a>
+      <Link to="/" title="Home" onClick={() => window.scrollTo(0, 0)}>Home</Link>
     </li>
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/about" title="About">About</a>
+      <Link to="/about" title="About" onClick={() => window.scrollTo(0, 0)}>About</Link>
     </li>
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/menu" title="Menu">Menu</a>
+      <Link to="/menu" title="Menu" onClick={() => window.scrollTo(0, 0)}>Menu</Link>
     </li>
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/reservation" title="Reservation">Reservation</a>
+      <Link to="/reservation" title="Reservation" onClick={() => window.scrollTo(0, 0)}>Reservation</Link>
     </li>
     <li className={styles.Item}>
-      <a className={classNames(styles.Link, 'text-lead-text')} href="/order" title="Order online">Order online</a>
+      <Link to="/order" title="Order online" onClick={() => window.scrollTo(0, 0)}>Order online</Link>
     </li>
   </ul>
 )

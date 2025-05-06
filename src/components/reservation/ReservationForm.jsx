@@ -12,7 +12,7 @@ import { Formik } from 'formik'
 const Reservation = () => {
   const [step, setStep] = useState('reservation')
   const navigate = useNavigate()
-  const [reservation, setReservation] = useOutletContext()
+  const { setReservation } = useOutletContext()
 
   const handleSetStepReservation = useCallback(() => {
     setStep('reservation')

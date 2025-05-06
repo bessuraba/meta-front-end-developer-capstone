@@ -2,9 +2,9 @@ import { Outlet } from 'react-router-dom'
 import { useState } from 'react'
 
 const Reservation = () => {
-  const [data, setData] = useState({})
+  const [reservation, setReservation] = useState({})
   return (
-    <Outlet context={[data, setData]}/>
+    <Outlet context={{ reservation, setReservation }}/>
   )
 }
 
