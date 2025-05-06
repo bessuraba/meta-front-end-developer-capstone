@@ -1,12 +1,18 @@
-import Header from './header/Header'
-import Main from '../Main'
-import Title from './header/Title'
 import Button from './form/Button'
+import Bottom from './containers/Bottom'
+import Support from './links/Support'
+import Top from './containers/Top'
 
-const StepReservation = ({ onSubmit }) => (
+const StepReservation = ({ onSubmit, formik }) => (
   <>
-    step reservation
-    <Button onClick={onSubmit}>Reserve a table</Button>
+    <Top>
+      <div>Left</div>
+      <div>Right</div>
+    </Top>
+    <Bottom>
+      <Button onClick={onSubmit}>Reserve a table</Button>
+      <Support />
+    </Bottom>
   </>
 )
 

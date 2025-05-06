@@ -1,9 +1,14 @@
 import Submit from './form/Submit'
+import Bottom from './containers/Bottom'
+import Support from './links/Support'
 
 const StepReviewInfo = () => (
   <>
     step review info
-    <Submit />
+    <Bottom>
+      <Submit />
+      <Support />
+    </Bottom>
   </>
 )
 

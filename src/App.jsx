@@ -9,6 +9,7 @@ import About from './components/about/About'
 import Menu from './components/menu/Menu'
 import Order from './components/order/Order'
 import Login from './components/login/Login'
+import Reservations from './components/reservations/Reservations'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/reservations" element={<Reservations />} />
         <Route path="/reservation" element={<Reservation />}>
           <Route index element={<ReservationForm />} />
           <Route path="complete" element={<ReservationComplete />} />

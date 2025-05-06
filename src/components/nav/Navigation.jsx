@@ -13,7 +13,7 @@ const Navigation = () => (
       <Link to="/menu" title="Menu">Menu</Link>
     </li>
     <li className={styles.Item}>
-      <Link to="/reservation" title="Reservation">Reservation</Link>
+      <Link to="/reservations" title="Reservations">Reservations</Link>
     </li>
     <li className={styles.Item}>
       <Link to="/order" title="Order online">Order online</Link>

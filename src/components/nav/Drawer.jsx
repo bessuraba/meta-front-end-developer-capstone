@@ -40,7 +40,7 @@ const Wrapper = (props) => (
         <Link onClick={props.onClick} to="/menu" title="Menu">Menu</Link>
       </li>
       <li className={styles.Item}>
-        <Link onClick={props.onClick} to="/reservation" title="Reservation">Reservation</Link>
+        <Link onClick={props.onClick} to="/reservations" title="Reservations">Reservations</Link>
       </li>
       <li className={styles.Item}>
         <Link onClick={props.onClick} to="/order" title="Order online">Order online</Link>

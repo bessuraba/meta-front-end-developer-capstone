@@ -13,7 +13,7 @@ const Navigation = () => (
       <Link to="/menu" title="Menu" onClick={() => window.scrollTo(0, 0)}>Menu</Link>
     </li>
     <li className={styles.Item}>
-      <Link to="/reservation" title="Reservation" onClick={() => window.scrollTo(0, 0)}>Reservation</Link>
+      <Link to="/reservations" title="Reservations" onClick={() => window.scrollTo(0, 0)}>Reservations</Link>
     </li>
     <li className={styles.Item}>
       <Link to="/order" title="Order online" onClick={() => window.scrollTo(0, 0)}>Order online</Link>
