@@ -1,0 +1,7 @@
+.Label {
+  color: var(--colors-dark-grey);
+}
+
+.Error {
+  color: var(--colors-light-salmon);
+}

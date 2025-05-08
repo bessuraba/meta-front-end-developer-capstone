@@ -8,6 +8,8 @@ import Back from './header/Back'
 import { useState, useCallback, useMemo } from 'react'
 import { useNavigate, useOutletContext } from 'react-router-dom'
 import { Formik } from 'formik'
+import * as Yup from 'yup'
+
 
 const Reservation = () => {
   const [step, setStep] = useState('reservation')
@@ -50,10 +52,30 @@ const Reservation = () => {
       {header}
       <Main>
         <Formik
-          initialValues={{}}
+          initialValues={{
+            date: '',
+            time: '',
+            occasion: '',
+            guests: {
+              adults: 0,
+              children: 0,
+              pets: 0
+            }
+          }}
+          validationSchema={Yup.object({
+            date: Yup.string().required('Required'),
+            time: Yup.string().required('Required'),
+            occasion: Yup.string().required('Required'),
+            guests: Yup.object({
+              adults: Yup.number().required('Required'),
+              children: Yup.number().required('Required'),
+              pets: Yup.number().required('Required')
+            })
+          })}
+          validateOnChange
           onSubmit={handleSubmit}>
           {(formik) => (
-            <Form>
+            <Form onSubmit={formik.handleSubmit} {...formik}>
               {step === 'reservation' && (
                 <StepReservation onSubmit={handleSetStepInfo} formik={formik} />
               )}

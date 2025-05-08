@@ -5,6 +5,7 @@ import { useOutletContext } from 'react-router-dom'
 import Bottom from './containers/Bottom'
 import Reservations from './links/Reservations'
 import Section from './containers/Confirmation'
+import Top from './containers/Top'
 
 const ReservationComplete = (props) => {
   const { reservation } = useOutletContext()
@@ -16,7 +17,10 @@ const ReservationComplete = (props) => {
       </Header>
       <Main>
         <Section>
-          <h2>Reservation Confirmed</h2>
+          <Top>
+            <div>Left</div>
+            <div>Right</div>
+          </Top>
           <Bottom>
             <Reservations />
           </Bottom>

@@ -1,0 +1,95 @@
+@import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+
+/** Input Group Start */
+
+.Group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.Label {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.Input {
+  height: 70px;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: var(--colors-light-grey);
+  border-radius: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  color: var(--colors-dark-grey);
+  cursor: pointer;
+}
+
+.Input::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+.InputOpened {
+  border-color: var(--colors-dark-grey);
+}
+
+.InputError {
+  color: var(--colors-light-salmon);
+  border-color: var(--colors-light-salmon);
+  background: var(--colors-bisque);
+}
+
+.Icon {
+  width: 36px;
+  height: 36px;
+  fill: none;
+}
+
+.Icon path {
+  fill: currentColor;
+}
+
+.Error {
+  color: var(--colors-light-salmon);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/** Input Group End */
+
+@media (max-width: 1024px) {
+  
+}
+
+@media (max-width: 760px) {
+  /** Input Group Start */
+
+  .Group {
+    gap: 8px;
+  }
+
+  .Input {
+    height: 50px;
+  }
+
+  .Input::after,
+  .IconDefault {
+    width: 32px;
+    height: 32px;
+  }
+
+  /** Input Group End */
+}
