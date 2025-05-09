@@ -1,6 +1,6 @@
 @import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
-/** Input Group Start */
+/* Input Group Start */
 
 .Group {
   width: 100%;
@@ -68,14 +68,10 @@
   padding-right: 16px;
 }
 
-/** Input Group End */
-
-@media (max-width: 1024px) {
-  
-}
+/* Input Group End */
 
 @media (max-width: 760px) {
-  /** Input Group Start */
+  /* Input Group Start */
 
   .Group {
     gap: 8px;
@@ -91,5 +87,5 @@
     height: 32px;
   }
 
-  /** Input Group End */
+  /* Input Group End */
 }

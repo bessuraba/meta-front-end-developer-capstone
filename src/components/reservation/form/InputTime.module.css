@@ -1,0 +1,73 @@
+/* Input Group Start */
+
+.Group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.Label {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.Input {
+  padding: 16px;
+  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.Item {
+  text-align: center;
+  color: var(--colors-dark-grey);
+  background-color: var(--colors-light-grey);
+  border: 1px solid var(--colors-light-grey);
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.ItemSelected {
+  color: var(--colors-light-grey);
+  background-color: var(--colors-green);
+  border: 1px solid var(--colors-green);
+}
+
+.ItemError {
+  color: var(--colors-light-salmon);
+  background-color: var(--colors-bisque);
+  border: 1px solid var(--colors-light-salmon);
+}
+
+.Error {
+  color: var(--colors-light-salmon);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Input Group End */
+
+@media (max-width: 760px) {
+  /* Input Group Start */
+
+  .Group {
+    gap: 8px;
+  }
+
+  .Input {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  /* Input Group End */
+}

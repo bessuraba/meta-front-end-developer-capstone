@@ -8,6 +8,7 @@ import InputOccasion from './form/InputOccasion'
 import InputGuests from './form/InputGuests'
 import { Field } from 'formik'
 import Left from './containers/Left'
+import Right from './containers/Right'
 import styles from './StepReservation.module.css'
 
 const StepReservation = ({ onSubmit, formik }) => (
@@ -16,17 +17,17 @@ const StepReservation = ({ onSubmit, formik }) => (
       <Left className={styles.Left}>
         <Field component={InputDate} name="date" />
       </Left>
-      <div>
+      <Right className={styles.Right}>
         <Field component={InputTime} name="time" />
-      </div>
+      </Right>
     </Top>
     <Top>
-      <div>
+      <Left className={styles.Left}>
         <Field component={InputOccasion} name="occasion" />
-      </div>
-      <div>
+      </Left>
+      <Right className={styles.Right}>
         <Field component={InputGuests} name="guests" />
-      </div>
+      </Right>
     </Top>
     <Bottom>
       <Button onClick={() => {

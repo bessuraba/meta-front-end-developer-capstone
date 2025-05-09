@@ -55,7 +55,6 @@ const InputDate = ({ field, form }) => {
   }, [field.value])
 
   const input = useMemo(() => {
-    console.log(field.name, form)
     return (
       <Input name={field.name} form={form} isOpened={isOpened} />
     )
