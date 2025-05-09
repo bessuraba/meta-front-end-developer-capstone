@@ -1,0 +1,124 @@
+/* Input Group Start */
+
+.Group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.Label {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.Input {
+  position: relative;
+  height: 70px;
+  width: 100%;
+}
+
+.Select {
+  width: 100%;
+  height: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid var(--colors-light-grey);
+  border-radius: 16px;
+  background: var(--colors-light-grey);
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  color: var(--colors-dark-grey);
+  text-align: center;
+}
+
+.SelectSelected {
+  border-color: var(--colors-green);
+  color: var(--colors-light-grey);
+  background: var(--colors-green);
+}
+
+.SelectError {
+  border-color: var(--colors-light-salmon);
+  color: var(--colors-light-salmon);
+  background: var(--colors-bisque);
+}
+
+.Icon, .Arrow {
+  width: 36px;
+  height: 36px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.ArrowOpened {
+  transform: rotate(180deg);
+}
+
+.Icon path, .Arrow path {
+  fill: currentColor;
+}
+
+.Dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--colors-light-grey);
+  border: 1px solid var(--colors-light-grey);
+  color: var(--colors-dark-grey);
+  z-index: 99;
+}
+
+.Option {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid var(--colors-dark-grey);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.Error {
+  color: var(--colors-light-salmon);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Input Group End */
+
+@media (max-width: 760px) {
+  /* Input Group Start */
+
+  .Group {
+    gap: 8px;
+  }
+
+  .Input {
+    height: 50px;
+  }
+
+  .Option {
+    height: 50px;
+  }
+
+  .Icon, .Arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Input Group End */
+}
