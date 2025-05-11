@@ -1,0 +1,82 @@
+/* Input Group Start */
+
+.Group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.Label {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.Input {
+  height: 70px;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  background: var(--colors-light-grey);
+  border-radius: 16px;
+  color: var(--colors-dark-grey);
+  outline-offset: -1px;
+  text-align: left;
+  border: 1px solid transparent;
+}
+
+.Input::placeholder {
+  color: var(--colors-dark-grey);
+  opacity: 1;
+}
+
+.Input:focus {
+  outline: 1px solid var(--colors-dark-grey);
+}
+
+.InputSelected {
+  background: var(--colors-green);
+  color: var(--colors-light-grey);
+}
+
+.InputSelected:focus {
+  outline: 1px solid var(--colors-green);
+}
+
+.InputError {
+  color: var(--colors-light-salmon);
+  border-color: var(--colors-light-salmon);
+  background: var(--colors-bisque);
+}
+
+.InputError::placeholder {
+  color: var(--colors-light-salmon);
+}
+
+.InputError:focus {
+  outline: 1px solid var(--colors-light-salmon);
+}
+
+.Error {
+  color: var(--colors-light-salmon);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Input Group End */
+
+@media (max-width: 760px) {
+  /* Input Group Start */
+
+  .Group {
+    gap: 8px;
+  }
+
+  .Input {
+    height: 50px;
+  }
+
+  /* Input Group End */
+}

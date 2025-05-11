@@ -6,6 +6,14 @@ import Bottom from './containers/Bottom'
 import Reservations from './links/Reservations'
 import Section from './containers/Confirmation'
 import Top from './containers/Top'
+import Left from './containers/Left'
+import Right from './containers/Right'
+import styles from './ReservationComplete.module.css'
+import classNames from 'classnames'
+import _ from 'lodash'
+import Table from './infos/Table'
+import Contacts from './infos/Contacts'
+import Notes from './infos/Notes'
 
 const ReservationComplete = (props) => {
   const { reservation } = useOutletContext()
@@ -18,8 +26,20 @@ const ReservationComplete = (props) => {
       <Main>
         <Section>
           <Top>
-            <div>Left</div>
-            <div>Right</div>
+            <Left className={styles.Left}>
+              <h2 className={classNames('text-sub-title', styles.Title)}>Table Info</h2>
+              <Table data={reservation} />
+            </Left>
+            <Right className={styles.Right}>
+              <h2 className={classNames('text-sub-title', styles.Title)}>Contact Info</h2>
+              <Contacts data={reservation} />
+              {!_.isEmpty(reservation.note) && (
+                <>
+                  <h2 className={classNames('text-sub-title', styles.Title)}>Notes</h2>
+                  <Notes data={reservation} />
+                </>
+              )}
+            </Right>
           </Top>
           <Bottom>
             <Reservations />

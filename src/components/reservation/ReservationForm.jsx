@@ -43,7 +43,7 @@ const Reservation = () => {
 
   const handleSubmit = useCallback(async (values) => {
     console.log(values)
-    setReservation({ value: 'Test' })
+    setReservation(values)
     navigate('/reservation/complete')
   }, [navigate, setReservation])
 
@@ -69,14 +69,18 @@ const Reservation = () => {
             note: ''
           }}
           validationSchema={Yup.object().shape({
-            date: Yup.string().required('Required'),
-            time: Yup.string().required('Required'),
-            occasion: Yup.string().required('Required'),
+            date: Yup.string().required('Please specify a visit date'),
+            time: Yup.string().required('Please specify a visit time'),
+            occasion: Yup.string().required('Please select an occasion'),
             guests: Yup.object().shape({
               adults: Yup.number().min(1, 'Please select at least one adult visitor').max(9, 'Please select at most 9 adults'),
               children: Yup.number().max(9, 'Please select at most 9 children'),
               pets: Yup.number().max(9, 'Please select at most 9 pets')
-            })
+            }),
+            firstName: Yup.string().min(5, 'Please enter at least 2 characters').max(50, 'Please enter at most 50 characters').required('Please enter your first name'),
+            lastName: Yup.string().min(5, 'Please enter at least 2 characters').max(50, 'Please enter at most 50 characters').required('Required'),
+            email: Yup.string().email('Please enter a valid email').required('Please enter your email'),
+            phone: Yup.string().required('Please enter your phone number')
           })}
           validateOnChange
           onSubmit={handleSubmit}>

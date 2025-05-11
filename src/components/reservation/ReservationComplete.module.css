@@ -1,0 +1,12 @@
+.Left {
+  gap: 24px;
+}
+
+.Right {
+  gap: 24px;
+}
+
+.Title {
+  text-align: left;
+  color: var(--colors-dark-grey);
+}

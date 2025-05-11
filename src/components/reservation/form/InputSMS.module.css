@@ -1,0 +1,39 @@
+.Group {
+  width: 100%;
+  padding: 16px 10px;
+}
+
+.Checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.Input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.Checkmark {
+  width: 36px;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+.Label {
+  color: var(--colors-dark-grey);
+}
+
+@media (max-width: 760px) {
+  .Checkbox {
+    gap: 10px;
+  }
+
+  .Checkmark {
+    width: 32px;
+  }
+}
