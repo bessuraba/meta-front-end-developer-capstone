@@ -60,7 +60,13 @@ const Reservation = () => {
               adults: 0,
               children: 0,
               pets: 0
-            }
+            },
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            sms: false,
+            note: ''
           }}
           validationSchema={Yup.object().shape({
             date: Yup.string().required('Required'),
