@@ -1,0 +1,133 @@
+/* Input Group Start */
+
+.Group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.Label {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.Input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.Section {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  grid-template-areas: "info increment count decrement";
+  gap: 10px;
+  height: 80px;
+  border-bottom: 1px solid var(--colors-light-grey);
+  color: var(--colors-dark-grey);
+  align-items: center;
+}
+
+.Section:last-child {
+  border-bottom: none;
+}
+
+.SectionError {
+  color: var(--colors-light-salmon);
+}
+
+.ContainerInfo {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.Heading, .Description {
+  color: currentColor;
+}
+
+.ContainerIncrement {
+  grid-area: increment;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContainerCount {
+  grid-area: count;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: currentColor;
+  border-radius: 16px;
+}
+
+.ContainerCountSelected {
+  color: var(--colors-light-grey);
+  background-color: var(--colors-green);
+}
+
+.ContainerCountError {
+  background-color: var(--colors-bisque);
+}
+
+.ContainerDecrement {
+  grid-area: decrement;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Button {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  color: inherit;
+  background-color: var(--colors-light-grey);
+}
+
+.Icon {
+  width: 32px;
+  height: 32px;
+  fill: none
+}
+
+.Icon path {
+  fill: currentColor;
+}
+
+.Error {
+  color: var(--colors-light-salmon);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Input Group End */
+
+@media (max-width: 760px) {
+  /* Input Group Start */
+
+  .Group {
+    gap: 8px;
+  }
+
+  /* Input Group End */
+}

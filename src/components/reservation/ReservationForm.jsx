@@ -62,14 +62,14 @@ const Reservation = () => {
               pets: 0
             }
           }}
-          validationSchema={Yup.object({
+          validationSchema={Yup.object().shape({
             date: Yup.string().required('Required'),
             time: Yup.string().required('Required'),
             occasion: Yup.string().required('Required'),
-            guests: Yup.object({
-              adults: Yup.number().required('Required'),
-              children: Yup.number().required('Required'),
-              pets: Yup.number().required('Required')
+            guests: Yup.object().shape({
+              adults: Yup.number().min(1, 'Please select at least one adult visitor').max(9, 'Please select at most 9 adults'),
+              children: Yup.number().max(9, 'Please select at most 9 children'),
+              pets: Yup.number().max(9, 'Please select at most 9 pets')
             })
           })}
           validateOnChange

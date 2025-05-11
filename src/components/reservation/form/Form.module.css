@@ -14,3 +14,11 @@
   padding-top: 64px;
   padding-bottom: 64px;
 }
+
+@media (max-width: 1024px) {
+  .Form {
+    gap: 48px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}

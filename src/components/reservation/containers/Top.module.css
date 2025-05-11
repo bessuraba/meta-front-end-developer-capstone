@@ -7,3 +7,9 @@
 
   border: 1px solid blue;
 }
+
+@media (max-width: 1024px) {
+  .Wrapper {
+    column-gap: 48px;
+  }
+}

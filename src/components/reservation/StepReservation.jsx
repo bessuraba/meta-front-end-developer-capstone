@@ -10,6 +10,7 @@ import { Field } from 'formik'
 import Left from './containers/Left'
 import Right from './containers/Right'
 import styles from './StepReservation.module.css'
+import _ from 'lodash'
 
 const StepReservation = ({ onSubmit, formik }) => (
   <>
@@ -30,10 +31,17 @@ const StepReservation = ({ onSubmit, formik }) => (
       </Right>
     </Top>
     <Bottom>
-      <Button onClick={() => {
-        const { validateField, setTouched, errors } = formik
-        validateField('date', 'time', 'occasion', 'guests')
-        setTouched({ date: true, time: true, occasion: true, guests: true })
+      <Button onClick={async () => {
+        const { validateForm, setTouched } = formik
+
+        await setTouched({ date: true, time: true, occasion: true, guests: true })
+
+        const results = await validateForm(formik.values)
+
+        if (!_.isEmpty(_.pick(results, ['date', 'time', 'occasion', 'guests']))) {
+          return
+        }
+
         onSubmit()
       }}>Reserve a table</Button>
       <Support />

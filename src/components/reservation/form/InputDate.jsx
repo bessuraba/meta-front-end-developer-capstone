@@ -19,13 +19,17 @@ const Icon = ({ className, error }) => (
 )
 
 const Input = forwardRef(({ value, onClick, className, name, form, isOpened, placeholder }, ref) => {
+  const selected = useMemo(() => {
+    return !_.isNil(value) && !_.isEmpty(value)
+  }, [value])
+
   const content = useMemo(() => {
-    if (_.isNil(value) || _.isEmpty(value)) {
+    if (!selected) {
       return placeholder
     }
 
     return value
-  }, [value, placeholder])
+  }, [value, placeholder, selected])
 
   const error = useMemo(() => form.touched[name] && form.errors[name], [form, name])
 
@@ -33,6 +37,7 @@ const Input = forwardRef(({ value, onClick, className, name, form, isOpened, pla
     <div className={styles.Group}>
       <Label className={styles.Label} error={Boolean(error)}>Date</Label>
       <button type="button" className={classNames('text-highlight-text', styles.Input, {
+        [styles.InputSelected]: selected,
         [styles.InputError]: Boolean(error),
         [styles.InputOpened]: isOpened
       }, className)} onClick={onClick} ref={ref}>

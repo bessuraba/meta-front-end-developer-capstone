@@ -1,9 +1,10 @@
 import styles from './Submit.module.css'
+import classNames from 'classnames'
 
-const Submit = () => {
+const Submit = ({ children }) => {
   return (
-    <button className={styles.submit} type="submit">
-      Submit
+    <button className={classNames('btn-primary', styles.Button)} type="submit">
+      {children}
     </button>
   )
 }

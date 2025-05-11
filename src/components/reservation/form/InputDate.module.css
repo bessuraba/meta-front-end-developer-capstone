@@ -44,6 +44,14 @@
 
 .InputOpened {
   border-color: var(--colors-dark-grey);
+  background: var(--colors-light-grey);
+  color: var(--colors-dark-grey);
+}
+
+.InputSelected {
+  border-color: var(--colors-green);
+  background: var(--colors-green);
+  color: var(--colors-light-grey);
 }
 
 .InputError {
