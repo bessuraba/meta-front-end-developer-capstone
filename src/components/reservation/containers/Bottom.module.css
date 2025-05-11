@@ -5,12 +5,16 @@
   align-items: center;
   gap: 32px;
   width: 100%;
-
-  border: 1px solid red;
 }
 
 @media (max-width: 1024px) {
   .Bottom {
     gap: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .Bottom {
+    gap: 16px;
   }
 }

@@ -26,7 +26,7 @@
   grid-template-columns: 1fr auto auto auto;
   grid-template-areas: "info increment count decrement";
   gap: 10px;
-  height: 80px;
+  height: 70px;
   border-bottom: 1px solid var(--colors-light-grey);
   color: var(--colors-dark-grey);
   align-items: center;
@@ -127,6 +127,27 @@
 
   .Group {
     gap: 8px;
+  }
+
+  .Section {
+    height: initial;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .ContainerCount {
+    width: 36px;
+    height: 36px;
+  }
+
+  .Button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .Icon {
+    width: 26px;
+    height: 26px;
   }
 
   /* Input Group End */

@@ -16,3 +16,23 @@
   padding-bottom: 32px;
   gap: 16px;
 }
+
+@media (max-width: 1024px) {
+  .Wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .Container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .Container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    gap: 10px;
+  }
+}
