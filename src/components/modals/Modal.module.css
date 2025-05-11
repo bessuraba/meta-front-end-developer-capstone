@@ -1,0 +1,22 @@
+.Modal {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 16px;
+  z-index: 101;
+}
+
+@media (max-width: 760px) {
+  .Modal {
+    left: 16px;
+    right: 16px;
+    transform: initial;
+    max-width: initial;
+    width: calc(100% - 32px);
+  }
+}

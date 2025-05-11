@@ -1,0 +1,6 @@
+.Header {
+  background-color: var(--colors-green);
+  color: var(--colors-yellow);
+  text-align: center;
+  padding: 32px 24px;
+}

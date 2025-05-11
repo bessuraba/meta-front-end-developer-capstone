@@ -14,6 +14,7 @@ import _ from 'lodash'
 import Table from './infos/Table'
 import Contacts from './infos/Contacts'
 import Notes from './infos/Notes'
+import Cancel from './modals/Cancel'
 
 const ReservationComplete = (props) => {
   const { reservation } = useOutletContext()
@@ -42,6 +43,7 @@ const ReservationComplete = (props) => {
             </Right>
           </Top>
           <Bottom>
+            <Cancel />
             <Reservations />
           </Bottom>
         </Section>
