@@ -10,6 +10,7 @@ import { useNavigate, useOutletContext } from 'react-router-dom'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import ReservationContext from './utils/ReservationContext'
+import submitAPI from './utils/submitAPI'
 
 
 const Reservation = () => {
@@ -44,6 +45,12 @@ const Reservation = () => {
 
   const handleSubmit = useCallback(async (values) => {
     console.log(values)
+    const result = submitAPI(values)
+
+    if (!result) {
+      return
+    }
+
     setReservation(values)
     navigate('/reservation/complete')
   }, [navigate, setReservation])

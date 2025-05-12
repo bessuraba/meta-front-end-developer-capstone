@@ -16,9 +16,9 @@ import Contacts from './infos/Contacts'
 import Notes from './infos/Notes'
 import Cancel from './modals/Cancel'
 
-const ReservationComplete = (props) => {
+const ReservationComplete = () => {
   const { reservation } = useOutletContext()
-  console.log(reservation)
+
   return (
     <>
       <Header>

@@ -1,4 +1,5 @@
 import { createContext, useContext, memo } from 'react'
+import fetchAPI from './fetchAPI'
 
 const defaultOccasions = [
   {
@@ -28,7 +29,7 @@ export const useReservationContext = () => useContext(Context)
 
 const Provider = ({ children }) => {
   return (
-    <Context.Provider value={{ occasions: defaultOccasions, availableTimes: defaultTimes }}>
+    <Context.Provider value={{ occasions: defaultOccasions, availableTimes: fetchAPI(new Date()) }}>
       <Memorized>{children}</Memorized>
     </Context.Provider>
   )
