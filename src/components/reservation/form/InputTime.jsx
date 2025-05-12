@@ -4,17 +4,7 @@ import classNames from 'classnames'
 import { useMemo, useCallback } from 'react'
 import _ from 'lodash'
 import Label from '../../Label'
-
-const times = [
-  '13:00',
-  '13:30',
-  '14:00',
-  '14:30',
-  '15:00',
-  '15:30',
-  '16:00',
-  '16:30'
-]
+import { useReservationContext } from '../utils/ReservationContext'
 
 const Item = ({ children, className, value, error, selected, onClick }) => (
   <button
@@ -29,6 +19,7 @@ const Item = ({ children, className, value, error, selected, onClick }) => (
 )
 
 const InputTime = ({ field, form }) => {
+  const { availableTimes } = useReservationContext()
   const error = useMemo(() => form.touched[field.name] && form.errors[field.name], [form, field.name])
 
   const handleChange = useCallback((input) => {
@@ -36,7 +27,7 @@ const InputTime = ({ field, form }) => {
   }, [field])
 
   const items = useMemo(() => {
-    return _.map(times, (time) => (
+    return _.map(availableTimes, (time) => (
       <Item
         key={time}
         error={Boolean(error)}
@@ -46,7 +37,7 @@ const InputTime = ({ field, form }) => {
         {time}
       </Item>
     ))
-  }, [error, field.value, handleChange])
+  }, [error, field.value, handleChange, availableTimes])
 
   return (
     <ErrorBoundary fallback={<div>Something went wrong</div>}>

@@ -9,6 +9,7 @@ import { useState, useCallback, useMemo } from 'react'
 import { useNavigate, useOutletContext } from 'react-router-dom'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
+import ReservationContext from './utils/ReservationContext'
 
 
 const Reservation = () => {
@@ -48,7 +49,7 @@ const Reservation = () => {
   }, [navigate, setReservation])
 
   return (
-    <>
+    <ReservationContext>
       {header}
       <Main>
         <Formik
@@ -94,7 +95,7 @@ const Reservation = () => {
           )}
         </Formik>
       </Main>
-    </>
+    </ReservationContext>
   )
 }
 

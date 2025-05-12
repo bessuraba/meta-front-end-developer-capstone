@@ -2,26 +2,13 @@ import styles from './Table.module.css'
 import classNames from 'classnames'
 import { useMemo } from 'react'
 import _ from 'lodash'
-
-const occasions = [
-  {
-    name: 'Birthday',
-    value: 'birthday'
-  },
-  {
-    name: 'Anniversary',
-    value: 'anniversary'
-  },
-  {
-    name: 'Engagement',
-    value: 'engagement'
-  }
-]
+import { useReservationContext } from '../utils/ReservationContext'
 
 const Table = ({ data }) => {
+  const { occasions } = useReservationContext()
   const occasion = useMemo(() => {
     return _.find(occasions, { value: data.occasion }).name
-  }, [data.occasion])
+  }, [data.occasion, occasions])
 
   const guests = useMemo(() => {
     const result = [`${data.guests.adults} Adults`]

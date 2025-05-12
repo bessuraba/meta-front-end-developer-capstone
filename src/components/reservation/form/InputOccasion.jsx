@@ -4,21 +4,7 @@ import Label from '../../Label'
 import { useMemo, useState, useCallback } from 'react'
 import classNames from 'classnames'
 import _ from 'lodash'
-
-const occasions = [
-  {
-    name: 'Birthday',
-    value: 'birthday'
-  },
-  {
-    name: 'Anniversary',
-    value: 'anniversary'
-  },
-  {
-    name: 'Engagement',
-    value: 'engagement'
-  }
-]
+import { useReservationContext } from '../utils/ReservationContext'
 
 const Icon = ({ className }) => (
   <svg
@@ -42,6 +28,7 @@ const Arrow = ({ opened, className }) => (
 
 const Select = ({ value, placeholder, error, onSelect }) => {
   const [isOpened, setIsOpened] = useState(false)
+  const { occasions } = useReservationContext()
 
   const selected = useMemo(() => {
     return !_.isNil(value) && !_.isEmpty(value)
@@ -53,7 +40,7 @@ const Select = ({ value, placeholder, error, onSelect }) => {
     }
 
     return _.find(occasions, { value }).name
-  }, [value, placeholder, selected])
+  }, [value, placeholder, selected, occasions])
 
   const dropdownElements = useMemo(() => {
     return _.map(occasions, (occasion) => (
@@ -69,7 +56,7 @@ const Select = ({ value, placeholder, error, onSelect }) => {
         {occasion.name}
       </li>
     ))
-  }, [value, onSelect])
+  }, [value, onSelect, occasions])
 
   return (
     <div className={styles.Input}>
