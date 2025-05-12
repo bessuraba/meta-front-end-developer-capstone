@@ -6,6 +6,7 @@ import Link from '../Link'
 
 const ButtonToggle = (props) => (
   <button
+    {...props}
     type="button"
     aria-controls="drawer-menu"
     aria-expanded={props.isDrawerOpen}
@@ -17,6 +18,7 @@ const ButtonToggle = (props) => (
 
 const ButtonClose = (props) => (
   <button
+    {...props}
     type="button"
     aria-controls="drawer-menu"
     aria-expanded={props.isDrawerOpen}
@@ -73,12 +75,12 @@ const Drawer = () => {
 
   return (
     <>
-      <ButtonToggle onClick={handleToggle} isDrawerOpen={isDrawerOpen}/>
+      <ButtonToggle aria-label='Open Drawer' onClick={handleToggle} isDrawerOpen={isDrawerOpen}/>
       {createPortal(
         (<Wrapper onClick={handleToggle} className={{
           [styles.WrapperOpened]: isDrawerOpen
         }}>
-          <ButtonClose onClick={handleToggle} isDrawerOpen={isDrawerOpen}/>
+          <ButtonClose aria-label='Close Drawer' onClick={handleToggle} isDrawerOpen={isDrawerOpen}/>
         </Wrapper>),
         document.body
       )}
