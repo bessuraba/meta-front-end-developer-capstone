@@ -19,7 +19,7 @@ const Cancel = (): React.JSX.Element => {
   return (
     <>
       <Button onClick={() => setIsModalOpen(true)} aria-controls=''>Cancel Reservation</Button>
-      {isModalOpen && typeof window !== 'undefined' && createPortal(
+      {isModalOpen && createPortal(
         <>
           <Background onClick={() => setIsModalOpen(false)}/>
           <Modal>

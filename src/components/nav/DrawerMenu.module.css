@@ -1,0 +1,75 @@
+.Wrapper {
+  display: none
+}
+
+@media (max-width: 760px) {
+  .IconDrawer {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 0.8461;
+  }
+
+  .IconCross {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .Wrapper {
+    display: grid;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    transform-origin: top left;
+    overflow: hidden;
+    background-color: white;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    will-change: width, height;
+    z-index: 100;
+  }
+
+  .WrapperOpened {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .TopBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100vw;
+    height: var(--navbar-height-tablet);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .Menu {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 48px;
+    padding-right: 48px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100vw;
+    height: calc(100vh - (var(--navbar-height-tablet) + 16px));
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .Item {
+    padding: 12px 0;
+  }
+}
