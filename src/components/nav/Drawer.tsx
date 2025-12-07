@@ -1,59 +1,48 @@
 'use client'
 
 import styles from './Drawer.module.css'
-import { useCallback, useEffect, useState } from 'react'
-import { createPortal } from 'react-dom'
-import classNames from 'classnames'
-import Link from '../Link'
+import { useCallback, useEffect, useState, HTMLAttributes } from 'react'
+import dynamic from 'next/dynamic'
 
-const ButtonToggle = (props: any): React.JSX.Element => (
+const DrawerMenu = dynamic(
+  () => import('./DrawerMenu'),
+  { ssr: false }
+);
+
+type Props = HTMLAttributes<HTMLButtonElement> & {
+  isDrawerOpen: boolean
+}
+
+const ButtonToggle: React.FC<Props> = ({
+  isDrawerOpen,
+  onClick,
+  ...props
+}: Props): React.JSX.Element => (
   <button
     {...props}
     type="button"
     aria-controls="drawer-menu"
-    aria-expanded={props.isDrawerOpen}
+    aria-expanded={isDrawerOpen}
     className={styles.Button}
-    onClick={props.onClick}>
+    onClick={onClick}>
     <img className={styles.IconDrawer} src="/icon-drawer.svg" alt="menu"/>
   </button>
 )
 
-const ButtonClose = (props: any): React.JSX.Element => (
+const ButtonClose: React.FC<Props> = ({
+  isDrawerOpen,
+  onClick,
+  ...props
+}: Props): React.JSX.Element => (
   <button
     {...props}
     type="button"
     aria-controls="drawer-menu"
-    aria-expanded={props.isDrawerOpen}
+    aria-expanded={isDrawerOpen}
     className={styles.Button}
-    onClick={props.onClick}>
+    onClick={onClick}>
     <img className={styles.IconCross} src="/icon-cross.svg" alt="close"/>
   </button>
-)
-
-const Wrapper = (props: any): React.JSX.Element => (
-  <div className={classNames(styles.Wrapper, props.className)}>
-    <div className={styles.TopBar}>{props.children}</div>
-    <ul className={styles.Menu} role="navigation">
-      <li className={styles.Item}>
-        <Link href="/" title="Home">Home</Link>
-      </li>
-      <li className={styles.Item}>
-        <Link href="/about" title="About">About</Link>
-      </li>
-      <li className={styles.Item}>
-        <Link href="/menu" title="Menu">Menu</Link>
-      </li>
-      <li className={styles.Item}>
-        <Link href="/reservations" title="Reservations">Reservations</Link>
-      </li>
-      <li className={styles.Item}>
-        <Link href="/order" title="Order online">Order online</Link>
-      </li>
-      <li className={styles.Item}>
-        <Link href="/login" title="Login">Login</Link>
-      </li>
-    </ul>
-  </div>
 )
 
 const Drawer = () => {
@@ -78,14 +67,9 @@ const Drawer = () => {
   return (
     <>
       <ButtonToggle aria-label='Open Drawer' onClick={handleToggle} isDrawerOpen={isDrawerOpen}/>
-      {typeof window !== 'undefined' && createPortal(
-        (<Wrapper onClick={handleToggle} className={{
-          [styles.WrapperOpened]: isDrawerOpen
-        }}>
-          <ButtonClose aria-label='Close Drawer' onClick={handleToggle} isDrawerOpen={isDrawerOpen}/>
-        </Wrapper>),
-        document.body
-      )}
+      <DrawerMenu onClick={handleToggle} isDrawerOpen={isDrawerOpen}>
+        <ButtonClose aria-label='Close Drawer' onClick={handleToggle} isDrawerOpen={isDrawerOpen}/>
+      </DrawerMenu>
     </>
   )
 }

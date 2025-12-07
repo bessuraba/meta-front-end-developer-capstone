@@ -1,9 +1,10 @@
 import styles from "./Logo.module.css"
+import Link from "next/link"
 
 const Logo = () => (
-  <a className={styles.Wrapper} href="/" title="Little Lemon">
+  <Link className={styles.Wrapper} href="/" title="Little Lemon">
     <img className={styles.Image} src="/Logo.svg" alt="logo"/>
-  </a>
+  </Link>
 )
 
 export default Logo

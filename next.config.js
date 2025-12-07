@@ -3,7 +3,14 @@ const path = require('path')
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
   webpack: (config) => {
     config.resolve.alias = {
@@ -16,6 +23,8 @@ const nextConfig = {
     }
     return config
   },
+  // Empty turbopack config to use webpack instead (as per Next.js 16 migration)
+  turbopack: {},
 }
 
 module.exports = nextConfig
